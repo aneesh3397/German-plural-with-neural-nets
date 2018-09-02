@@ -17,9 +17,7 @@ null: 15%
 
 umlaut: 2.5%
 
--er+umlaut: 12.3%
-
-(frequencies obtained from Bittner and Köpcke, 2001)
+-er+umlaut: 12.3% (frequencies obtained from Bittner and Köpcke, 2001)
 
 As mentioned above, -s acts a minority default, meaning that while it's frequency is low, when presented with a new word, a German speaker's first tendency in forming the plural would be to inflect with -s. 
 
@@ -34,26 +32,42 @@ When trained on input.txt, the following results were obtained:
 Results on test examples generated from prototypes (first 70): 
 
 -s :  10
--n :  10
+
+-n :  10 
+
 -e :  9
+
 -e+umlaut :  12
+
 null :  9
+
 umlaut :  7
+
 -er+umlaut :  11
+
 No marking :  2
+
 Double marking :  0
 
 
 Results on randomly generated test examples (remaining 100): 
 
 -s :  10
+
 -n :  8
+
 -e :  4
+
 -e+umlaut :  15
+
 null :  6
+
 umlaut :  0
+
 -er+umlaut :  10
+
 No marking :  45
+
 Double marking :  2
 
 We see that there is no preference for -s when it comes to marking novel forms. The model therefore hasn't learnt the minority default. When trained on input2txt however, the following results are obtained:
@@ -61,27 +75,45 @@ We see that there is no preference for -s when it comes to marking novel forms. 
 Results on test examples generated from prototypes: 
 
 -s :  7
+
 -n :  10
+
 -e :  11
+
 -e+umlaut :  12
+
 null :  9
+
 umlaut :  2
+
 -er+umlaut :  11
+
 No marking :  8
+
 Double marking :  0
 
 
 Results on randomly generated test examples: 
 
 -s :  30
+
 -n :  2
+
 -e :  1
+
 -e+umlaut :  9
+
 null :  6
+
 umlaut :  0
+
 -er+umlaut :  3
+
 No marking :  46
+
 Double marking :  3
 
 We see that when trained on input2, there is a preference for marking novel forms with -s (30 inflections). This is attributed to the fact that in input2, the -s training examples are randomly generated. Since the net is being trained on a more general
 class now, ‘-s’ is preferred as the default inflection because the randomly generated novel tokens would be more similar to the ‘-s’ class than any other. With the correct training data, the model is able to learn the minority default. 
+
+(Training and test data provided by Prof. Gaja Jarosz for Ling 692c)
