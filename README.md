@@ -6,12 +6,19 @@ Neural nets are remarkably successful at learning the morphology of languages. T
 The German plural is a bit more complicated. There are a total of 7 inflections, listed below with their frequencies:
 
 -s: 7.4%
+
 -n: 28.7%
+
 -e: 17%
+
 -e + umlaut: 17%
+
 null: 15%
+
 umlaut: 2.5%
+
 -er+umlaut: 12.3%
+
 (frequencies obtained from Bittner and Köpcke, 2001)
 
 As mentioned above, -s acts a minority default, meaning that while it's frequency is low, when presented with a new word, a German speaker's first tendency in forming the plural would be to inflect with -s. 
